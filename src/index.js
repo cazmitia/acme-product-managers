@@ -8,8 +8,6 @@ const root = document.querySelector('#root');
 ReactDOM.render(
     <Provider store={store}>
         <Main />
-    </Provider>, 
+    </Provider>,
     root
-    );
-
-
+);

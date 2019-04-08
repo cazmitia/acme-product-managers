@@ -10,16 +10,16 @@ class Navbar extends Component {
         this.props.getAllManagers()
     }
 
-    render () {
+    render() {
         const productManagers = findProductManagers(this.props.products, this.props.managers)
         const links = [
-            {name: 'home', to: '/'},
-            {name: 'Products', to: '/products'},
-            {name: 'Managers', to: '/managers'}
+            { name: 'home', to: '/' },
+            { name: 'Products', to: '/products' },
+            { name: 'Managers', to: '/managers' }
         ]
         return (
             <nav>
-                <ul className ="nav nav-pills">
+                <ul className="nav nav-pills">
                     {links.map(link => (
                         <li key={link.name}>
                             <NavLink className="nav-link" activeClassName="nav-link active" exact to={link.to}>

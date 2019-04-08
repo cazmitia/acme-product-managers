@@ -6,12 +6,12 @@ import Navbar from './Navbar'
 import Home from './Home'
 
 export default class Main extends Component {
-    render () {
+    render() {
         return (
             <div>
-                <h1>Products and managers</h1>
+                <h1>Acme Product Managers</h1>
                 <Router>
-                <Navbar />
+                    <Navbar />
                     <Route path="/products" component={Products} />
                     <Route path="/managers" component={Managers} />
                     <Route exact path="/" component={Home} />

@@ -16,19 +16,18 @@ const Manager = db.define('manager', {
 })
 
 Manager.hasMany(Product)
-Product.belongsTo(Manager)
 
 const initDb = (force = false) => {
-    return db.sync({force})
-    .then(() => Manager.create({name: 'Moe'}))
-    .then(() => Manager.create({name: 'Larry'}))
-    .then(() => Manager.create({name: 'Curly'}))
-    .then(() => Product.create({name: 'Bar', managerId: 2}))
-    .then(() => Product.create({name: 'Bazz'}))
-    .then(() => Product.create({name: 'Buzz'}))
+    return db.sync({ force })
+        .then(() => Manager.create({ name: 'Moe' }))
+        .then(() => Manager.create({ name: 'Larry' }))
+        .then(() => Manager.create({ name: 'Curly' }))
+        .then(() => Product.create({ name: 'Bar', managerId: 2 }))
+        .then(() => Product.create({ name: 'Bazz' }))
+        .then(() => Product.create({ name: 'Buzz' }))
 }
 
-module.exports =  {
+module.exports = {
     Product,
     Manager,
     initDb
