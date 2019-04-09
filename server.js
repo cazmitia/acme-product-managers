@@ -12,7 +12,7 @@ app.get('/app.js', (req, res, next) => res.sendFile(path.join(__dirname, 'dist',
 app.get('/', (req, res, next) => res.sendFile(path.join(__dirname, 'index.html')));
 
 app.get('/api/products', (req, res, next) => {
-    Product.findAll({ 
+    Product.findAll({
         attributes: ['id', 'name', 'managerId'],
         order: [['id', 'ASC']]
     })

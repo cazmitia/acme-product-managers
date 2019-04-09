@@ -6,8 +6,7 @@ import { findProductManagers } from './util.js'
 
 class Navbar extends Component {
     componentDidMount() {
-        this.props.getAllProducts()
-        this.props.getAllManagers()
+        Promise.all([this.props.getAllProducts(), this.props.getAllManagers()])
     }
 
     render() {
